@@ -59,7 +59,6 @@ def conll_to_visual(conll_file, pipeline, sent_count=10, display_all=False):
             document_result = Doc(nlp.vocab, words=words, lemmas=lemmas, heads=heads, deps=deps, pos=tags)
             sentences_to_visualize.append(document_result)
 
-        print(sentences_to_visualize)
         for line in sentences_to_visualize:  # render all sentences through displaCy
             displacy.render(line, style="dep", options=visualization_options)
 
