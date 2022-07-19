@@ -37,8 +37,7 @@ def visualize_ner_doc(doc, language, select=None, colors=None):
                     clr_val = visualization_colors[color]
                     visualization_colors.pop(color)
                     visualization_colors[RTL_OVERRIDE + color[::-1]] = clr_val
-            print(colors)
-            print(f'Visualization Colors: {visualization_colors}')
+
     for sentence in sentences:
         words, display_ents, already_found = [], [], False
         # initialize doc object with words first
